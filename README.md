@@ -17,4 +17,6 @@ python manage.py runserver
 ```
 
 
+## UI
+
 ![ui](crudapp_ui.jpeg)
