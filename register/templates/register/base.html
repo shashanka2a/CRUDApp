@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="{% static 'register\css\bootstrap.css' %}">
+</head>
+<body>
+    <div class = "container mt-5">
+        <h3 class = "text-center alert alert-danger"> CRUD Project</h3>
+        {% block content %}{% endblock content %}
+    </div>
+<script src = "{% static 'register\js\jquery.js' %}"></script>
+<script src = "{% static 'register\js\popper.js' %}"></script>
+<script src = "{% static 'register\js\bootstrap.js' %}"></script>
+
+
+</body>
+</html>
