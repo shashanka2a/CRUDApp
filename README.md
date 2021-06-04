@@ -1,5 +1,8 @@
 # CRUDApp
 
+Django app to perform Create, Read, Update, Delete (CRUD) operations.
+
+
 ## Environment
 
 ```sh
