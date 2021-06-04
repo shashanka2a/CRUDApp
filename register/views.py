@@ -3,16 +3,21 @@ from .forms import UserRegistration
 from .models import User 
 # Create your views here.
 def add_view(request):
-    if request.method == 'POST':
-        fm = UserRegistration(request.POST)
-        if fm.is_valid():
-            fm.save()
+    if user.is_authenticated:
+        if request.method == 'POST':
+            fm = UserRegistration(request.POST)
+            if fm.is_valid():
+                fm.save()
+                fm = UserRegistration()
+                return redirect(add_view)
+        else:
             fm = UserRegistration()
-            return redirect(add_view)
+        emp = User.objects.all()
+        return render(request,'register/adduser.html',{'form':fm,'em':emp})
     else:
-        fm = UserRegistration()
-    emp = User.objects.all()
-    return render(request,'register/adduser.html',{'form':fm,'em':emp})
+        emp = User.objects.all()
+        return render(request,'register/showinfo.html',{'em':emp})
+        
 
 def del_user(request,id):
     if request.method=='POST':
